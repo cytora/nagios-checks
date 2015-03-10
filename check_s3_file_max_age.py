@@ -129,7 +129,7 @@ msg = msg + ' - At least ' + str(maxfiles) + ' file' + ("" if maxfiles == 1 else
 #
 if maxfiles < minfilecount:
     statusline = 'CRITICAL: Not enough recent S3 files.' + msg
-    exitcode = 3
+    exitcode = 2
 elif maxfiles >= minfilecount:
     statusline = 'OK: Recent S3 files found.' + msg
     exitcode = 0
